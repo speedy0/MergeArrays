@@ -8,6 +8,12 @@ public class MergeSort {
         int currArr1Ind = 0;
         int currArr2Ind = 0;
 
+        mergeArray(array1, array2, arrayLengths, sortedArray, currArr1Ind, currArr2Ind);
+
+        return sortedArray;
+    }
+
+    private static void mergeArray(int[] array1, int[] array2, int arrayLengths, int[] sortedArray, int currArr1Ind, int currArr2Ind) {
         for (int sortArrayIndex = 0; sortArrayIndex <= arrayLengths - 1; sortArrayIndex++){
             if (currArr1Ind > array1.length - 1){
                 sortedArray[sortArrayIndex] = array2[currArr2Ind];
@@ -26,6 +32,5 @@ public class MergeSort {
                 currArr1Ind++;
             }
         }
-        return sortedArray;
     }
 }
